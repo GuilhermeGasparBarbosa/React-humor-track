@@ -1,0 +1,78 @@
+/*
+//Funções simples
+const teste = () => {
+}
+
+function teste1() {
+}
+
+//Funções que retornam JSX
+function teste2() {
+  return <View></View>
+}
+
+const teste3 = () => {
+  return <View></View>
+}
+
+//Componentes React
+function Teste4() {
+  return <View></View>
+}
+
+const Teste5 = () => {
+  return <View></View>
+}
+
+//Reacr hook - Usado para componentizar lógica e estado em componentes funcionais 
+function useTeste6() {
+  const [] = useState()
+
+  return 1+1
+}
+
+//Pops - Propriedades passadas para componentes React
+import { View, Text } from 'react-native';
+
+interface IExemploProps {
+    order: number;
+}
+export const ExemploComponnt = (props: IExemploProps) => {
+    return (
+        <View>
+            <Text>Ola mundo {props.order}</Text>
+        </View>
+    );
+}
+
+//Enquanto passamos a propriedade no componente
+
+export default function App() {
+    return (
+     <SafeAreaView>
+        <FirstComponent order={1}/>
+        <FirstComponent order={2}/>
+        <FirstComponent order={3}/>
+     </SafeAreaView>
+    );
+}
+
+//Colocar ? para tornar a propriedade opcional
+
+interface IMyButtonProps {
+    onPress?: () => void;
+    order?: number;
+    children: React.ReactNode; // Define a propriedade children para permitir que o componente MyButton receba elementos filhos, como o texto que será exibido dentro do botão.
+}
+
+//Elementos de interface
+
+TouchableOpacity - Componente que pode ser pressionado, usado para criar botões personalizados
+Text - Componente usado para exibir texto
+View - Componente usado para criar contêineres e organizar a interface
+Button - Componente usado para criar botões simples, mas com menos personalização do que TouchableOpacity
+SafeAreaView - Componente usado para garantir que o conteúdo seja exibido dentro das áreas seguras do dispositivo, evitando sobreposição com elementos do sistema como a barra de status ou a barra de navegação
+
+//hook e fluxo de render - Toda vez que temos uma mudança de estado o app é renderizado novamente, ou seja, a função do componente é executada novamente.
+useState - Hook usado para adicionar estado a componentes funcionais. Ele retorna um array com o valor atual do estado e uma função para atualizá-lo. O estado é preservado entre renderizações do componente, permitindo que ele seja atualizado dinamicamente com base em interações do usuário ou outras mudanças.
+*/
