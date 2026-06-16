@@ -75,4 +75,23 @@ SafeAreaView - Componente usado para garantir que o conteúdo seja exibido dentr
 
 //hook e fluxo de render - Toda vez que temos uma mudança de estado o app é renderizado novamente, ou seja, a função do componente é executada novamente.
 useState - Hook usado para adicionar estado a componentes funcionais. Ele retorna um array com o valor atual do estado e uma função para atualizá-lo. O estado é preservado entre renderizações do componente, permitindo que ele seja atualizado dinamicamente com base em interações do usuário ou outras mudanças.
+
+
+
+// Como ocultar elementos da tela 
+export default function App() {
+    const [hide, setHide] = useState(false);
+
+    console.log('render')
+    
+    return (
+     <SafeAreaView>
+
+        {hide
+            ? <Text>Showed</Text> // se hide for true, mostra o texto, se for false, não mostra nada
+            : <Text>Hided</Text> // se hide for false, mostra o texto, se for true, não mostra nada
+        } 
+
+// <ScrollView> - Usado para configurar o Scroll da tela
+
 */
