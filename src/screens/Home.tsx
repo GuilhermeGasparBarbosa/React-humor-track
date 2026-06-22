@@ -1,11 +1,12 @@
 import { Button, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { TNavigationScreenProps } from "../Routes";
 
-type TNavigationScreemProps = NativeStackNavigationProp<Record<string, any>>;
+
+
 
 export const HomePage = () => {
-    const navigation = useNavigation<TNavigationScreemProps>();
+    const navigation = useNavigation<TNavigationScreenProps>();
 
 
     return (<>
@@ -13,7 +14,12 @@ export const HomePage = () => {
 
         <Button
             title="Go to Detail"
-            onPress={() => navigation.push('detail', { rate : 3 })}
+            onPress={() => navigation.navigate('detail', { rate : 3 })}
+        />
+
+         <Button
+            title="Go to Set User Name"
+            onPress={() => navigation.navigate('setUserName')}
         />
     </>)
 }
